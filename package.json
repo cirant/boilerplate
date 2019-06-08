@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nodemon --exec babel-node ./bin/www",
+    "lint": "eslint --ignore-path .gitignore ./ && echo Lint Passed",
     "start": "node ./bin/www"
   },
   "dependencies": {
@@ -19,6 +20,9 @@
     "@babel/core": "^7.4.5",
     "@babel/node": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
     "nodemon": "^1.19.1"
   }
 }
