@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nodemon --exec babel-node ./bin/www",
-    "lint": "eslint --ignore-path .gitignore ./ && echo Lint Passed",
+    "lint": "eslint --fix --ignore-path .gitignore ./ && echo Lint Passed",
     "start": "node ./bin/www"
   },
   "dependencies": {
