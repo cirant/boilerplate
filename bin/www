@@ -62,7 +62,7 @@ const onListening = () => {
     : `port ${addr.port}`;
 
   debug(`Listening on ${bind}`);
-}
+};
 
 server.listen(port);
 server.on('error', onError);
