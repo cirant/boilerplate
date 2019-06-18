@@ -7,7 +7,7 @@ describe('SAMPLE unit test', () => {
   it('should get all of user message', async (done) => {
     request(app)
       .get('/user')
-      .expect(200)
+      .expect(401)
       .end((err) => {
         if (err) {
           return done(err);
