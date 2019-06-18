@@ -6,7 +6,8 @@
     "dev": "nodemon --exec babel-node ./bin/www",
     "lint": "eslint --fix --ignore-path .gitignore ./ && echo Lint Passed",
     "start": "node babel-node ./bin/www",
-    "test": "jest --detectOpenHandles"
+    "test": "jest --detectOpenHandles --forceExit",
+    "coverage": "jest --detectOpenHandles --coverage --forceExit"
   },
   "dependencies": {
     "bcrypt": "^3.0.6",
