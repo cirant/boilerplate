@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import db from './src/db';
 
 mongoose.set('useFindAndModify', false);
 const createError = require('http-errors');
@@ -9,10 +10,9 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 dotenv.config({ silent: true });
-mongoose.connect(process.env.MONGODB_URI,
-  {
-    useNewUrlParser: true,
-  }, (err) => {
+
+mongoose.connect(db.url,
+  db.parameters, (err) => {
   /* istanbul ignore if */
     if (err) {
       console.log('Error en la conexion de BD');

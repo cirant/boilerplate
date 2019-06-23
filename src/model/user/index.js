@@ -20,7 +20,7 @@ schema.method({
         if (isMatch) {
           const secret = process.env.SECRET || 'secret';
           const token = jwt.sign({ exp: Math.floor(Date.now() / 1000) + (60 * 60) }, secret);
-          res.status(200).json({ text: token });
+          res.status(200).json({ token });
         } else {
           callback(createError(400));
         }

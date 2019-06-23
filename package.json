@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "nodemon --exec babel-node ./bin/www",
+    "dev": "set NODE_ENV=development && nodemon --exec babel-node ./bin/www",
     "lint": "eslint --fix --ignore-path .gitignore ./ && echo Lint Passed",
     "start": "node babel-node ./bin/www",
-    "test": "jest --detectOpenHandles --forceExit",
+    "test": "set NODE_ENV=test && jest --detectOpenHandles --runInBand --forceExit",
     "coverage": "jest --detectOpenHandles --coverage --forceExit"
   },
   "dependencies": {
